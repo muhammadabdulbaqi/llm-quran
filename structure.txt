@@ -1,0 +1,20 @@
+LLM_Quran/
+│
+├── data/
+│   └── en_ahmedali.txt
+│
+├── quran_faiss_index/
+│   └── (FAISS index files)
+│
+├── .env                  ← HuggingFace token here
+├── requirements.txt
+│
+├── utils/
+│   └── quran_parser.py   ← load & chunk ayahs
+│
+├── backend/
+│   ├── prepare_docs.py   ← create FAISS index from text
+│   ├── retriever.py      ← loads FAISS + sets retriever
+│   └── qa_chain.py       ← LLM + retriever = Q&A chain
+│
+└── app.py                ← Streamlit app 
